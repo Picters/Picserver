@@ -10,6 +10,12 @@ server_02 = True
 server_03 = True
 server_04 = True
 
+# Server status
+status_01 = Fore.GREEN + "Working" + Fore.RESET
+status_02 = Fore.GREEN + "Working" + Fore.RESET
+status_03 = Fore.GREEN + "Working" + Fore.RESET
+status_04 = Fore.GREEN + "Working" + Fore.RESET
+
 # Commands
 def clear(): os.system("cls")
 
@@ -38,15 +44,13 @@ def svping():
     print(Fore.GREEN + "DONE")
 
 def svcontrol():
-    status_1 = Fore.GREEN + "Working" + Fore.RESET
-    status_2 = Fore.GREEN + "Working" + Fore.RESET
-    status_3 = Fore.GREEN + "Working" + Fore.RESET
-    status_4 = Fore.GREEN + "Working" + Fore.RESET
+    global server_01, server_02, server_03, server_04
+    global status_01, status_02, status_03, status_04
     
-    print("server_01 = {status_1}")
-    print("server_02 = {status_2}")
-    print("server_03 = {status_3}")
-    print("server_04 = {status_4}")
+    print("server_01 = ", status_01)
+    print("server_02 = ", status_02)
+    print("server_03 = ", status_03)
+    print("server_04 = ", status_04)
 
     sel = input("Enter the name of the server: ")
     if sel == "server_01" and server_01 == True:
