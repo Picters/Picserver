@@ -36,7 +36,76 @@ def svping():
     elif server_04 == False: print("Server \"04\"", Fore.RED + "Recieved 0/4" + Fore.RESET)
     time.sleep(2)
     print(Fore.GREEN + "DONE")
+
+def svcontrol():
+    status_1 = Fore.GREEN + "Working" + Fore.RESET
+    status_2 = Fore.GREEN + "Working" + Fore.RESET
+    status_3 = Fore.GREEN + "Working" + Fore.RESET
+    status_4 = Fore.GREEN + "Working" + Fore.RESET
     
+    print("server_01 = {status_1}")
+    print("server_02 = {status_2}")
+    print("server_03 = {status_3}")
+    print("server_04 = {status_4}")
+
+    sel = input("Enter the name of the server: ")
+    if sel == "server_01" and server_01 == True:
+        turn = input("Turn off the server? (y/n): ")
+        if turn == "y":
+             server_01 = False
+             status_01 = Fore.RED + "Not working" + Fore.RESET
+             print(Fore.GREEN + "DONE" + Fore.RESET)
+        else: return
+    elif sel == "server_01" and server_01 == False:
+        turn = input("Turn on the server? (y/n): ")
+        if turn == "y":
+            server_01 = True
+            status_01 = Fore.GREEN + "Working" + Fore.RESET
+            print(Fore.GREEN + "DONE" + Fore.RESET)
+        else: return
+    elif sel == "server_02" and server_02 == True:
+        turn = input("Turn off the server? (y/n): ")
+        if turn == "y":
+            server_02 = False
+            status_02 = Fore.RED + "Not working" + Fore.RESET
+            print(Fore.GREEN + "DONE" + Fore.RESET)
+        else: return
+    elif sel == "server_02" and server_02 == False:
+        turn = input("Turn on the server? (y/n): ")
+        if turn == "y":
+            server_02 = True
+            status_02 = Fore.GREEN + "Working" + Fore.RESET
+            print(Fore.GREEN + "DONE" + Fore.RESET)
+        else: return
+    elif sel == "server_03" and server_03 == True:
+        turn = input("Turn off the server? (y/n): ")
+        if turn == "y":
+            server_03 = False
+            status_03 = Fore.RED + "Not working" + Fore.RESET
+            print(Fore.GREEN + "DONE" + Fore.RESET)
+        else: return
+    elif sel == "server_03" and server_03 == False:
+        turn = input("Turn on the server? (y/n): ")
+        if turn == "y":
+            server_03 = True
+            status_03 = Fore.GREEN + "Working" + Fore.RESET
+            print(Fore.GREEN + "DONE" + Fore.RESET)
+        else: return
+    elif sel == "server_04" and server_04 == True:
+        turn = input("Turn off the server? (y/n): ")
+        if turn == "y":
+            server_04 = False
+            status_04 = Fore.RED + "Not working" + Fore.RESET
+            print(Fore.GREEN + "DONE" + Fore.RESET)
+        else: return
+    elif sel == "server_04" and server_04 == False:
+        turn = input("Turn on the server? (y/n): ")
+        if turn == "y":
+            server_04 = True
+            status_04 = Fore.GREEN + "Working" + Fore.RESET
+            print(Fore.GREEN + "DONE" + Fore.RESET)
+        else: return
+
 # Start
 print("Powering on...")
 time.sleep(1)
