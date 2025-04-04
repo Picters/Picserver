@@ -145,3 +145,4 @@ while True:
     elif command == "sv.ping": svping()
     elif command == "exit": sys.exit()
     elif command == "sv.control": svcontrol()
+    else: print(Fore.RED + "Unknown" + Fore.RESET)
